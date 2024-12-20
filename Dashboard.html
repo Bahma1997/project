@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="لوحة تحكم المستخدم بعد تسجيل الدخول.">
+    <title>لوحة التحكم - منصة خدمات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<script>
+    // التحقق من حالة تسجيل الدخول
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (!isLoggedIn) {
+        // إعادة توجيه المستخدم إلى صفحة تسجيل الدخول
+        alert('يجب عليك تسجيل الدخول أولاً!');
+        window.location.href = 'login.html';
+    }
+</script>
+
+<body>
+    <button id="logout">تسجيل الخروج</button>
+
+<script>
+    // تسجيل الخروج
+    document.getElementById('logout').addEventListener('click', function() {
+        // حذف حالة تسجيل الدخول
+        localStorage.removeItem('isLoggedIn');
+
+        // توجيه المستخدم لصفحة تسجيل الدخول
+        alert('تم تسجيل الخروج بنجاح!');
+        window.location.href = 'login.html';
+    });
+</script>
+
+    <!-- الهيدر -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html" class="active">لوحة التحكم</a></li>
+                <li><a href="orders.html">طلباتي</a></li>
+                <li><a href="profile.html">حسابي</a></li>
+                <li><a href="logout.html" class="logout">تسجيل الخروج</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <section class="dashboard">
+            <h1>مرحبا بك، [اسم المستخدم]</h1>
+            <p>هنا يمكنك إدارة طلباتك ومعلومات حسابك.</p>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <i class="fa fa-shopping-cart"></i>
+                    <h3>إجمالي الطلبات</h3>
+                    <p>0</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fa fa-clock"></i>
+                    <h3>قيد الإنجاز</h3>
+                    <p>0</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fa fa-check"></i>
+                    <h3>مكتملة</h3>
+                    <p>0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2024 منصة خدمات. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

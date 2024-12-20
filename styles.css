@@ -1,0 +1,102 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* الهيدر */
+header {
+    background-color: #005f73;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+header ul {
+    list-style: none;
+    display: flex;
+}
+header ul li {
+    margin: 0 10px;
+}
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+header ul li a:hover {
+    color: #ffd700;
+}
+header .btn {
+    background-color: #ffd700;
+    color: #005f73;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header .btn:hover {
+    background-color: white;
+    color: #005f73;
+}
+
+/* بطل الصفحة */
+.hero {
+    background: linear-gradient(to bottom, #005f73, #0a9396);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.hero-content h1 span {
+    color: #ffd700;
+}
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+.hero-content .btn {
+    background-color: #ffd700;
+    color: #005f73;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.hero-content .btn:hover {
+    background-color: white;
+    color: #005f73;
+}
+
+/* الفوتر */
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 1em;
+}

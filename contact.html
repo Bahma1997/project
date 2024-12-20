@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل معنا للحصول على مزيد من المعلومات عن خدماتنا.">
+    <title>اتصل بنا - تصميم احترافي</title>
+    <link rel="stylesheet" href="styleees.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="header-content">
+            <h1>اتصل بنا</h1>
+            <p>نسعد بتواصلك معنا لأي استفسار أو اقتراح.</p>
+        </div>
+    </header>
+
+    <!-- الفورم -->
+    <main>
+        <section class="contact-section">
+            <h2>أرسل لنا رسالة</h2>
+            <form id="contact-form" onsubmit="return handleSubmit(event)">
+                <div class="input-group">
+                    <label for="name"><i class="fa-solid fa-user"></i> الاسم الكامل</label>
+                    <input type="text" id="name" placeholder="أدخل اسمك" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+                    <input type="email" id="email" placeholder="example@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="subject"><i class="fa-solid fa-heading"></i> الموضوع</label>
+                    <input type="text" id="subject" placeholder="الموضوع" required>
+                </div>
+                <div class="input-group">
+                    <label for="message"><i class="fa-solid fa-comment"></i> الرسالة</label>
+                    <textarea id="message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+                </div>
+                <button type="submit">إرسال الرسالة</button>
+            </form>
+            <div id="success-message"></div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة. | <a href="#">سياسة الخصوصية</a></p>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+<script>
+function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('success-message').innerText = "تم إرسال رسالتك بنجاح!";
+    document.getElementById('success-message').style.color = "green";
+    setTimeout(() => {
+        document.getElementById('success-message').innerText = "";
+    }, 5000);
+}
+</script>
+</html>
